@@ -61,7 +61,7 @@ namespace Weekly_Assignment_4_Q4
                             Thread add = new Thread(() => { cal.Add(x, y); });
                             add.Start();
 
-                            if (Thread.CurrentThread == add)
+                            if (add.IsAlive)
                             {
                                 add.Abort();
                             }
@@ -70,7 +70,7 @@ namespace Weekly_Assignment_4_Q4
                             Thread sub = new Thread(() => { cal.Subtract(x, y); });
                             sub.Start();
 
-                            if (Thread.CurrentThread == sub)
+                            if (sub.IsAlive)
                             {
                                 sub.Abort();
                             }
@@ -79,7 +79,7 @@ namespace Weekly_Assignment_4_Q4
                             Thread mul = new Thread(() => { cal.Multiply(x, y); });
                             mul.Start();
 
-                            if (Thread.CurrentThread == mul)
+                            if (mul.IsAlive)
                             {
                                 mul.Abort();
                             }
@@ -88,7 +88,7 @@ namespace Weekly_Assignment_4_Q4
                             Thread div = new Thread(() => { cal.Divide(x, y); });
                             div.Start();
 
-                            if (Thread.CurrentThread == div)
+                            if (div.IsAlive)
                             {
                                 div.Abort();
                             }
@@ -97,7 +97,7 @@ namespace Weekly_Assignment_4_Q4
                             Thread rem = new Thread(() => { cal.Remainder(x, y); });
                             rem.Start();
 
-                            if (Thread.CurrentThread == rem)
+                            if (rem.IsAlive)
                             {
                                 rem.Abort();
                             }
@@ -106,7 +106,7 @@ namespace Weekly_Assignment_4_Q4
                             Thread pow = new Thread(() => { cal.Power(x, y); });
                             pow.Start();
 
-                            if (Thread.CurrentThread == pow)
+                            if (pow.IsAlive)
                             {
                                 pow.Abort();
                             }
